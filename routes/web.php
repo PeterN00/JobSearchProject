@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use  App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route("employee.home"));
 });
+
+Route::get('home', function () {
+    return redirect(route("employee.home"));
+});
+
+Route::name('employee.')->prefix('employee')->group(function (){
+
+    Route::any('/', 'EmployeeController@index')->name('home');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
