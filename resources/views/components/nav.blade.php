@@ -27,11 +27,11 @@
       <div class="w3-dropdown-hover">
         <button class="w3-button"><i class="fa fa-user"></i> {{Auth::guard('employee')->user()->email}}</button>
         <div class="w3-dropdown-content w3-bar-block w3-border w3-right">
-          <a href="{{ route('employee.logout')}}" class="w3-bar-item w3-button"><center> LOG OUT</center></a>
+          <a href="#" class="w3-bar-item w3-button"><center> LOG OUT</center></a>
         </div>
       </div>
       @else
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
+        <a href="{{ route('employee.login.show') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
       @endif
       
     </div>
@@ -67,11 +67,11 @@
       <div class="w3-dropdown-hover">
         <button class="w3-button"><i class="fa fa-user"></i> {{Auth::guard('employee')->user()->email}}</button>
         <div class="w3-dropdown-content w3-bar-block w3-border w3-right">
-          <a href="{{ route('employee.logout')}}" class="w3-bar-item w3-button"><center> LOG OUT</center></a>
+          <a href="#" class="w3-bar-item w3-button"><center> LOG OUT</center></a>
         </div>
       </div>
   @else
-    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
+    <a href="{{ route('employee.login.show') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
   @endif
 </nav>
 
