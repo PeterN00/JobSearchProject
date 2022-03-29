@@ -86,7 +86,7 @@
   <h3>Jobs:</h3>
   <div class="grid-container">
     @foreach($posts as $post)
-    <a href="#">
+    <a href="{{route('employee.job.show',['id'=>$post->id])}}">
     <div class="w3-container w3-border w3-round-large" style="padding:5px;background: #f9f9f9">
       <img src="{{ URL::asset("storage/{$post->logo}")}}" width="150px"alt="Avatar" class="w3-left w3-round-large w3-margin-right">
       

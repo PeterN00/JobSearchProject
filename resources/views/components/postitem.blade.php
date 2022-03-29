@@ -1,5 +1,5 @@
 <div class="w3-light-grey w3-container w3-round-xlarge " style="padding-top: 16px;">
-    <a href="#">
+    <a href="{{route('employee.job.show',['id'=>$post->id])}}">
     <div>
         <img src="{{ URL::asset('storage/'.$post->logo) }}" width="150" height="150"style="float:left; margin-right:16px;" class="w3-round-xlarge">
     </div>

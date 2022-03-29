@@ -34,6 +34,8 @@ Route::name('employee.')->prefix('employee')->group(function (){
     Route::get('search', 'PostController@index')->name('search');
 
     Route::post('search', 'PostController@search')->name('searchpost');
+
+    Route::get('job/{id}','PostController@show')->name("job.show");
 });
 Auth::routes();
 
