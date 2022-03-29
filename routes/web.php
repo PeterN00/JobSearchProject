@@ -26,6 +26,10 @@ Route::get('home', function () {
 Route::name('employee.')->prefix('employee')->group(function (){
 
     Route::any('/', 'EmployeeController@index')->name('home');
+    
+    Route::get('login', 'EmployeeAccountController@ShowLogin')->name('login.show');
+
+    Route::post('login', 'EmployeeAccountController@Login')->name('login');
 });
 Auth::routes();
 
