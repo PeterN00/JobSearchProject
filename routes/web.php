@@ -30,6 +30,10 @@ Route::name('employee.')->prefix('employee')->group(function (){
     Route::get('login', 'EmployeeAccountController@ShowLogin')->name('login.show');
 
     Route::post('login', 'EmployeeAccountController@Login')->name('login');
+
+    Route::get('search', 'PostController@index')->name('search');
+
+    Route::post('search', 'PostController@search')->name('searchpost');
 });
 Auth::routes();
 
