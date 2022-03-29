@@ -1,6 +1,6 @@
 <div class="w3-top" style="position: relative;">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <a href=" {{route('employee.home') }}" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
       <div class="w3-left w3-hide-small">
         
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="w3-bar-item w3-button"><i class='fa fa-search'></i> SEARCH</a>
+        <a href="{{ route('employee.search')}}" class="w3-bar-item w3-button"><i class='fa fa-search'></i> SEARCH</a>
         <a href="#footer" class="w3-bar-item w3-button"> ABOUT US</a>
       </div>
     <div class="w3-right w3-hide-small">
