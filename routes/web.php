@@ -31,6 +31,8 @@ Route::name('employee.')->prefix('employee')->group(function (){
 
     Route::post('login', 'EmployeeAccountController@Login')->name('login');
 
+    Route::any('logout', 'EmployeeAccountController@logout')->name('logout');
+    
     Route::get('register', 'EmployeeAccountController@create')->name('register.show');
 
     Route::post('register', 'EmployeeAccountController@store')->name('register');
