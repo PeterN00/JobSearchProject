@@ -27,6 +27,13 @@ class EmployeeAccountController extends Controller
         }
     }
 
+    public function Logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->back();
+    }
+
     public function create(){
         return view('register')->with('entity','employee');
     }
