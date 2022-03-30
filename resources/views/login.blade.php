@@ -27,7 +27,7 @@
     <p class="w3-center">
       
       <input class="w3-btn w3-brown" type="submit" value="Login">
-      <a class="w3-btn w3-brown" href="#" >Register</a>
+      <a class="w3-btn w3-brown" href="{{ route('employee.register.show') }}" >Register</a>
     </p>
   </form>
 </div>
